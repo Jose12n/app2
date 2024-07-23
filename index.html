@@ -18,14 +18,18 @@
             border-bottom: 1px solid #333;
             padding: 1em 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         header h1 {
             margin: 0;
             font-size: 2em;
-            color: #e0e0e0;
+            color: #00bfae;
         }
         main {
-            padding: 2em;
+            padding: 5em 2em 2em; /* Top padding to account for fixed header */
             max-width: 800px;
             margin: 0 auto;
         }
@@ -35,14 +39,15 @@
             border: none;
             padding: 1em 2em;
             font-size: 1.2em;
-            border-radius: 8px;
+            border-radius: 12px;
             cursor: pointer;
             margin: 0.5em;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.6);
         }
         button:hover {
             background-color: #009e94;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.8);
         }
         button:active {
             transform: scale(0.98);
@@ -68,6 +73,15 @@
         .link-item a:hover {
             text-decoration: underline;
         }
+        .footer {
+            background-color: #1e1e1e;
+            color: #aaa;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+        }
     </style>
 </head>
 <body>
@@ -80,6 +94,9 @@
         <button id="viewLinksButton">View Page Links</button>
         <div id="linksContainer" class="links" style="display: none;"></div>
     </main>
+    <div class="footer">
+        <p>&copy; 2024 Jarvis-Style Interface. All rights reserved.</p>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             function handleUserInput() {
