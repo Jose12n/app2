@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple-Style JavaScript Page</title>
+    <title>Jarvis-Style Interface</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f5;
-            color: #333;
+            background-color: #121212;
+            color: #e0e0e0;
             text-align: center;
         }
         header {
-            background-color: #fff;
-            border-bottom: 1px solid #e1e1e6;
+            background-color: #1e1e1e;
+            border-bottom: 1px solid #333;
             padding: 1em 0;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         header h1 {
             margin: 0;
-            font-size: 1.5em;
-            color: #333;
+            font-size: 2em;
+            color: #e0e0e0;
         }
         main {
             padding: 2em;
@@ -30,18 +30,19 @@
             margin: 0 auto;
         }
         button {
-            background-color: #007aff;
-            color: #fff;
+            background-color: #00bfae;
+            color: #121212;
             border: none;
-            padding: 0.75em 1.5em;
-            font-size: 1em;
-            border-radius: 12px;
+            padding: 1em 2em;
+            font-size: 1.2em;
+            border-radius: 8px;
             cursor: pointer;
             margin: 0.5em;
             transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
         button:hover {
-            background-color: #0051a2;
+            background-color: #009e94;
         }
         button:active {
             transform: scale(0.98);
@@ -50,18 +51,19 @@
             margin-top: 2em;
         }
         .link-item {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
             padding: 1em;
             margin: 0.5em auto;
             max-width: 500px;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
             text-align: left;
         }
         .link-item a {
-            color: #007aff;
+            color: #00bfae;
             text-decoration: none;
+            font-weight: bold;
         }
         .link-item a:hover {
             text-decoration: underline;
@@ -70,10 +72,10 @@
 </head>
 <body>
     <header>
-        <h1>Apple-Style JavaScript Page</h1>
+        <h1>Jarvis-Style Interface</h1>
     </header>
     <main>
-        <p>Click the button below to perform a search or browse the links on this page.</p>
+        <p>Interact with the system using the buttons below.</p>
         <button id="searchButton">Search YouTube</button>
         <button id="viewLinksButton">View Page Links</button>
         <div id="linksContainer" class="links" style="display: none;"></div>
