@@ -80,28 +80,19 @@
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Function to handle user input
             function handleUserInput() {
                 let searchTerm = prompt("Enter search term:");
                 if (searchTerm) {
-                    // Redirect to YouTube search results
                     let youtubeUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(searchTerm);
                     window.location.href = youtubeUrl;
                 } else {
-                    // Redirect to homepage if no input
                     window.location.href = "https://www.youtube.com";
                 }
             }
 
-            // Call the function immediately on page load
-            handleUserInput();
+            handleUserInput(); // Prompt for input immediately on page load
 
-            // Event listeners for buttons
-            const searchButton = document.getElementById('searchButton');
-            const viewLinksButton = document.getElementById('viewLinksButton');
-            const linksContainer = document.getElementById('linksContainer');
-
-            searchButton.addEventListener('click', () => {
+            document.getElementById('searchButton').addEventListener('click', () => {
                 let searchTerm = prompt("Enter search term:");
                 if (searchTerm) {
                     let youtubeUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(searchTerm);
@@ -109,7 +100,8 @@
                 }
             });
 
-            viewLinksButton.addEventListener('click', () => {
+            document.getElementById('viewLinksButton').addEventListener('click', () => {
+                const linksContainer = document.getElementById('linksContainer');
                 linksContainer.innerHTML = ''; // Clear previous links
                 let result = [];
                 let elements = document.querySelectorAll("a");
