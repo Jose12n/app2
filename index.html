@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Shortcut</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let searchTerm = prompt("Enter search term:");
+            if (searchTerm) {
+                let youtubeUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(searchTerm);
+                window.open(youtubeUrl, '_blank');
+            } else {
+                let result = [];
+                let elements = document.querySelectorAll("a");
+                for (let element of elements) {
+                    result.push({
+                        "url": element.href,
+                        "text": element.innerText
+                    });
+                }
+                window.open("https://www.youtube.com/", '_blank');
+                console.log(result);
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
